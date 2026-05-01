@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EmailBookingForm from '../components/booking/EmailBookingForm';
 import img1 from '../assets/img1.jpg';
+import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
+import img4 from '../assets/img4.jpg';
 import img5 from '../assets/img5.jpg';
 import img6 from '../assets/img6.jpg';
+import img8 from '../assets/img8.jpg';
 import img9 from '../assets/img9.jpg';
 import img10 from '../assets/img10.jpg';
 import img11 from '../assets/img11.jpg';
@@ -71,7 +74,7 @@ const Services = () => {
             title: "Serengeti Safari",
             focus: "Big Five Safaris",
             type: "Wildlife safari",
-            images: [img10, img11, img12, img13, img1],
+            images: [img3, img4, img5, img9, img17],
             description: "Witness the Great Migration and spot the Big Five in the endless plains of Serengeti.",
             highlights: ["Great Migration", "Big Five", "Hot Air Balloon"],
             itinerary: [
@@ -86,7 +89,7 @@ const Services = () => {
             title: "Ngorongoro Crater Safari",
             focus: "Crater Safari",
             type: "Wildlife safari",
-            images: [img9, img10, img17, img13, img11],
+            images: [img6, img2, img8, day3, img1],
             description: "Explore the world's largest inactive volcanic caldera, home to the Big Five and flamingos.",
             highlights: ["Black Rhinos", "Flamingos", "Crater Floor"],
             itinerary: [
