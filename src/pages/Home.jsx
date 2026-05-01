@@ -4,15 +4,21 @@ import EmailBookingForm from '../components/booking/EmailBookingForm';
 import toast from 'react-hot-toast';
 import img1 from '../assets/img1.jpg';
 import img4 from '../assets/img4.jpg';
+import img5 from '../assets/img5.jpg';
 import img11 from '../assets/img11.jpg';
 import img12 from '../assets/img12.jpg';
+import img13 from '../assets/img13.jpg';
+import img14 from '../assets/img14.jpg';
+import day2 from '../assets/2dy.jpg';
+import day4 from '../assets/4dy.jpg';
+import day5 from '../assets/5dy.jpg';
 
 const Home = () => {
     const [currentBg, setCurrentBg] = useState(0);
     const [currentStoryImage, setCurrentStoryImage] = useState(0);
     const [showBookingForm, setShowBookingForm] = useState(false);
-    const backgrounds = [img1, img11, img12];
-    const storyImages = [img4, img11];
+    const backgrounds = [img1, img11, img12, day2, day4];
+    const storyImages = [img14, img11, img5, img13, day5];
 
     // Sample safari for direct booking from home page
     const sampleSafari = {

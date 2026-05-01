@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import zoe13 from '../assets/zoe13.jpg';
+import zoe8 from '../assets/zoe8.jpg';
 
 const Destinations = () => {
+    const [currentImageIndex, setCurrentImageIndex] = React.useState({});
     const destinations = [
         {
             name: "Serengeti National Park",
@@ -41,6 +44,29 @@ const Destinations = () => {
         }
     ];
 
+    React.useEffect(() => {
+        const indices = {};
+        destinations.forEach(dest => {
+            if (dest.images) {
+                indices[dest.name] = 0;
+            }
+        });
+        setCurrentImageIndex(indices);
+
+        const intervals = destinations.map(dest => {
+            if (dest.images) {
+                return setInterval(() => {
+                    setCurrentImageIndex(prev => ({
+                        ...prev,
+                        [dest.name]: (prev[dest.name] + 1) % dest.images.length
+                    }));
+                }, 4000);
+            }
+        }).filter(Boolean);
+
+        return () => intervals.forEach(interval => clearInterval(interval));
+    }, []);
+
     return (
         <div style={{ padding: '60px 20px' }}>
             <div className="container-custom">
@@ -63,14 +89,34 @@ const Destinations = () => {
                                 background: 'var(--bg)',
                                 border: '1px solid var(--border)',
                                 borderRadius: '12px',
-                                padding: '24px',
+                                overflow: 'hidden',
                                 transition: 'transform 0.3s ease',
                             }}
                             className="safari-card"
                         >
-                            <h3 style={{ fontSize: '24px', marginBottom: '12px', color: 'var(--accent)' }}>
-                                {dest.name}
-                            </h3>
+                            {dest.images && (
+                                <div style={{
+                                    position: 'relative',
+                                    height: '220px',
+                                    overflow: 'hidden',
+                                    marginBottom: '16px'
+                                }}>
+                                    <img
+                                        src={dest.images[currentImageIndex[dest.name] || 0]}
+                                        alt={dest.name}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            transition: 'transform 0.6s ease'
+                                        }}
+                                    />
+                                </div>
+                            )}
+                            <div style={{ padding: '24px' }}>
+                                <h3 style={{ fontSize: '24px', marginBottom: '12px', color: 'var(--accent)' }}>
+                                    {dest.name}
+                                </h3>
                             <p style={{ color: 'var(--text)', marginBottom: '16px', lineHeight: 1.6 }}>
                                 {dest.description}
                             </p>
@@ -85,6 +131,7 @@ const Destinations = () => {
                                         <li key={i}>{highlight}</li>
                                     ))}
                                 </ul>
+                            </div>
                             </div>
                         </div>
                     ))}
