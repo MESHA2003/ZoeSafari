@@ -22,25 +22,11 @@ const Testimonials = () => {
             safari: "Kilimanjaro Hiking"
         },
         {
-            name: "Emma Williams",
-            country: "UK",
-            rating: 5,
-            text: "Deeper Serengeti exceeded all expectations. From wildlife encounters to sunset views, every moment was perfectly orchestrated. Can't wait to come back!",
-            safari: "Big Five Safari"
-        },
-        {
             name: "David Kim",
             country: "South Korea",
             rating: 5,
             text: "The guides were incredibly knowledgeable about animal behavior and habitats. We saw everything from lions hunting to elephants bathing. Amazing experience!",
             safari: "Northern Tanzania Safari"
-        },
-        {
-            name: "Maria Garcia",
-            country: "Spain",
-            rating: 5,
-            text: "Perfectly organized from start to finish. The lodging was comfortable, food was delicious, and wildlife sightings were abundant. Thank you DSS team!",
-            safari: "Ngorongoro Crater Tour"
         },
         {
             name: "James Wilson",

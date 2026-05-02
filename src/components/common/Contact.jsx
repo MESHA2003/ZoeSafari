@@ -111,7 +111,7 @@ This user has subscribed to the ZOE Wildlife Safaris newsletter.
     };
 
     // WhatsApp number
-    const whatsappNumber = "+255714500162";
+    const whatsappNumber = "+255762704464";
     const whatsappLink = `https://wa.me/${whatsappNumber}`;
 
     return (
@@ -174,7 +174,7 @@ This user has subscribed to the ZOE Wildlife Safaris newsletter.
                                 </div>
                                 <div>
                                     <strong style={{ fontSize: '16px', color: '#1F2937', display: 'block', marginBottom: '4px' }}>Call Us</strong>
-                                    <p style={{ color: '#6B7280', margin: 0 }}>+255 714 500 162</p>
+                                    <p style={{ color: '#6B7280', margin: 0 }}>+255 762 704 464</p>
                                 </div>
                             </div>
 
@@ -194,7 +194,7 @@ This user has subscribed to the ZOE Wildlife Safaris newsletter.
                                 <div>
                                     <strong style={{ fontSize: '16px', color: '#1F2937', display: 'block', marginBottom: '4px' }}>WhatsApp</strong>
                                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer" style={{ color: '#25D366', textDecoration: 'none' }}>
-                                        +255 714 500 162
+                                        +255 762 704 464
                                     </a>
                                 </div>
                             </div>
@@ -395,7 +395,7 @@ This user has subscribed to the ZOE Wildlife Safaris newsletter.
                                     </label>
                                     <input
                                         type="tel"
-                                        placeholder="+255 714 500 162"
+                                        placeholder="+255 762 704 464"
                                         value={formData.phone}
                                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                         style={{

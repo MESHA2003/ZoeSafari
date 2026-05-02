@@ -7,18 +7,19 @@ import img4 from '../assets/img4.jpg';
 import img5 from '../assets/img5.jpg';
 import img11 from '../assets/img11.jpg';
 import img12 from '../assets/img12.jpg';
-import img13 from '../assets/img13.jpg';
 import img14 from '../assets/img14.jpg';
 import day2 from '../assets/2dy.jpg';
-import day4 from '../assets/4dy.jpg';
 import day5 from '../assets/5dy.jpg';
+import new1 from '../assets/new1.jpg';
+import new3 from '../assets/new3.jpg';
+import new4 from '../assets/new4.jpg';
 
 const Home = () => {
     const [currentBg, setCurrentBg] = useState(0);
     const [currentStoryImage, setCurrentStoryImage] = useState(0);
     const [showBookingForm, setShowBookingForm] = useState(false);
-    const backgrounds = [img1, img11, img12, day2, day4];
-    const storyImages = [img14, img11, img5, img13, day5];
+    const backgrounds = [img1, img11, img12, day2, img4];
+    const storyImages = [new1, new3, new4, img5, img14];
 
     // Sample safari for direct booking from home page
     const sampleSafari = {
@@ -80,7 +81,22 @@ const Home = () => {
                             transition: 'opacity 1.5s ease-in-out',
                             zIndex: 0
                         }}
-                    />
+                    >
+                        {/* Copyright overlay */}
+                        <div style={{
+                            position: 'absolute',
+                            bottom: '10px',
+                            right: '10px',
+                            background: 'rgba(0,0,0,0.7)',
+                            color: 'white',
+                            padding: '4px 8px',
+                            borderRadius: '4px',
+                            fontSize: '10px',
+                            fontWeight: 'bold'
+                        }}>
+                            © ZOE Wildlife Safaris
+                        </div>
+                    </div>
                 ))}
                 <div style={{
                     position: 'absolute',
@@ -261,6 +277,22 @@ const Home = () => {
                                         }}
                                     />
                                 ))}
+
+                                {/* Copyright overlay */}
+                                <div style={{
+                                    position: 'absolute',
+                                    bottom: '10px',
+                                    right: '10px',
+                                    background: 'rgba(0,0,0,0.7)',
+                                    color: 'white',
+                                    padding: '4px 8px',
+                                    borderRadius: '4px',
+                                    fontSize: '10px',
+                                    fontWeight: 'bold',
+                                    zIndex: 3
+                                }}>
+                                    © ZOE Wildlife Safaris
+                                </div>
 
                                 {/* Overlay Gradient */}
                                 <div style={{

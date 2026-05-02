@@ -121,7 +121,7 @@ Please respond to this inquiry within 24 hours.
                                 </div>
                                 <div>
                                     <strong style={{ fontSize: '16px', color: '#1F2937', display: 'block', marginBottom: '4px' }}>Call Us</strong>
-                                    <p style={{ color: '#6B7280', margin: 0 }}>+255 714 500 162</p>
+                                    <p style={{ color: '#6B7280', margin: 0 }}>+255 762 704 464</p>
                                 </div>
                             </div>
 
@@ -319,7 +319,7 @@ Please respond to this inquiry within 24 hours.
                                 </label>
                                 <input
                                     type="tel"
-                                    placeholder="+255 XXX XXX XXX"
+                                    placeholder="+255 762 704 464"
                                     value={formData.phone}
                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                     style={{

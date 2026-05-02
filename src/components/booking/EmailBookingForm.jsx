@@ -196,7 +196,7 @@ ${formData.special_requests || 'No special requests'}
                             </label>
                             <input
                                 type="tel"
-                                placeholder="+255 XXX XXX XXX"
+                                placeholder="+255 762 704 464"
                                 value={formData.phone}
                                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                                 style={{

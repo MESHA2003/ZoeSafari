@@ -103,7 +103,7 @@ This user has subscribed to the ZOE Wildlife Safaris newsletter.
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
                             <span>📞</span>
-                            <p style={{ color: '#6B7280' }}>+255 714 500 162</p>
+                            <p style={{ color: '#6B7280' }}>+255 762 704 464</p>
                         </div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
                             <span>✉️</span>

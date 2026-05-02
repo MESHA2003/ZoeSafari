@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import zoe13 from '../assets/zoe13.jpg';
-import zoe8 from '../assets/zoe8.jpg';
 
 const Destinations = () => {
     const [currentImageIndex, setCurrentImageIndex] = React.useState({});

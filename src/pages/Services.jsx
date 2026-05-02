@@ -2,29 +2,31 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import EmailBookingForm from '../components/booking/EmailBookingForm';
 import img1 from '../assets/img1.jpg';
-import img2 from '../assets/img2.jpg';
 import img3 from '../assets/img3.jpg';
-import img4 from '../assets/img4.jpg';
 import img5 from '../assets/img5.jpg';
 import img6 from '../assets/img6.jpg';
-import img8 from '../assets/img8.jpg';
-import img9 from '../assets/img9.jpg';
-import img10 from '../assets/img10.jpg';
 import img11 from '../assets/img11.jpg';
 import img12 from '../assets/img12.jpg';
-import img13 from '../assets/img13.jpg';
-import img17 from '../assets/img17.jpg';
 import day1 from '../assets/1dy.jpg';
 import day2 from '../assets/2dy.jpg';
 import day3 from '../assets/3dy.jpg';
-import day4 from '../assets/4dy.jpg';
 import day5 from '../assets/5dy.jpg';
 import day6 from '../assets/6dy.jpg';
-import zoe13 from '../assets/zoe13.jpg';
-import zoe8 from '../assets/zoe8.jpg';
-import zoe11 from '../assets/zoe11.jpg';
-import zoe15 from '../assets/zoe15.jpg';
+import zoe1 from '../assets/zoe1.jpg';
+import zoe5 from '../assets/zoe5.jpg';
 import zoe7 from '../assets/zoe7.jpg';
+import zoe9 from '../assets/zoe9.jpg';
+import zoe13 from '../assets/zoe13.jpg';
+import zoe15 from '../assets/zoe15.jpg';
+import up1 from '../assets/up1.jpg';
+import up2 from '../assets/up2.jpg';
+import up3 from '../assets/up3.jpg';
+import up4 from '../assets/up4.jpg';
+import up5 from '../assets/up5.jpg';
+import new1 from '../assets/new1.jpg';
+import new3 from '../assets/new3.jpg';
+import new6 from '../assets/new6.jpg';
+import mesha from '../assets/mesha.jpg';
 
 const Services = () => {
     const [hoveredSafari, setHoveredSafari] = useState(null);
@@ -39,7 +41,7 @@ const Services = () => {
             title: "Northern Tanzania Safari Escape",
             focus: "Northern Safaris",
             type: "Wildlife safari",
-            images: [img6, img5, img3, img1, img11, img12],
+            images: [img5, img3, img1, img11, img12, up1, up2],
             description: "Experience the best of Northern Tanzania's wildlife including Serengeti and Ngorongoro Crater.",
             highlights: ["Serengeti Migration", "Ngorongoro Crater", "Lake Manyara"],
             itinerary: [
@@ -55,7 +57,7 @@ const Services = () => {
             title: "Kilimanjaro Hiking - Lemosho Route",
             focus: "Mountain Trekking",
             type: "Mountain trekking",
-            images: [zoe13, zoe8, zoe11, zoe15, zoe7],
+            images: [zoe1, zoe5, zoe7, zoe9, zoe13],
             description: "Conquer Africa's highest peak via the scenic Lemosho Route with expert mountain guides.",
             highlights: ["Uhuru Peak", "Shira Plateau", "Mawenzi Peak"],
             itinerary: [
@@ -74,7 +76,7 @@ const Services = () => {
             title: "Serengeti Safari",
             focus: "Big Five Safaris",
             type: "Wildlife safari",
-            images: [img3, img4, img5, img9, img17],
+            images: [new3, new1, new6, mesha, up3],
             description: "Witness the Great Migration and spot the Big Five in the endless plains of Serengeti.",
             highlights: ["Great Migration", "Big Five", "Hot Air Balloon"],
             itinerary: [
@@ -89,7 +91,7 @@ const Services = () => {
             title: "Ngorongoro Crater Safari",
             focus: "Crater Safari",
             type: "Wildlife safari",
-            images: [img6, img2, img8, day3, img1],
+            images: [img6, day3, img1, up1, up2],
             description: "Explore the world's largest inactive volcanic caldera, home to the Big Five and flamingos.",
             highlights: ["Black Rhinos", "Flamingos", "Crater Floor"],
             itinerary: [
@@ -104,7 +106,7 @@ const Services = () => {
             title: "6 Days Ultimate Tanzania Safari",
             focus: "Ultimate Tanzania Experience",
             type: "Wildlife safari",
-            images: [day1, day2, day3, day4, day5, day6],
+            images: [day1, day2, day3, day5, day6, up3, up4, up5],
             description: "Experience the best of Tanzania with visits to Tarangire, Serengeti, and Ngorongoro Crater. Spot elephant herds, lions, cheetahs, and the Big Five.",
             highlights: ["Tarangire National Park", "Serengeti Migration", "Ngorongoro Crater", "Big Five", "Elephant Herds", "Baobab Trees"],
             itinerary: [
@@ -184,219 +186,233 @@ const Services = () => {
                                 onMouseEnter={() => setHoveredSafari(safari.id)}
                                 onMouseLeave={() => setHoveredSafari(null)}
                             >
-                            <div style={{ position: 'relative', height: '320px', overflow: 'hidden' }}>
-                                <img
-                                    src={safari.images[currentImageIndex[safari.id]]}
-                                    alt={safari.title}
-                                    style={{
-                                        width: '100%',
-                                        height: '100%',
-                                        objectFit: 'cover',
-                                        transition: 'transform 0.6s ease',
-                                        transform: hoveredSafari === safari.id ? 'scale(1.1)' : 'scale(1)'
-                                    }}
-                                />
-                                <div style={{
-                                    position: 'absolute',
-                                    top: '20px',
-                                    left: '20px',
-                                    background: '#D97706',
-                                    color: 'white',
-                                    padding: '8px 16px',
-                                    borderRadius: '20px',
-                                    fontWeight: 'bold',
-                                    fontSize: '14px'
-                                }}>
-                                    {safari.days}
-                                </div>
-                                <div style={{
-                                    position: 'absolute',
-                                    bottom: '20px',
-                                    left: '50%',
-                                    transform: 'translateX(-50%)',
-                                    display: 'flex',
-                                    gap: '8px',
-                                    background: 'rgba(0,0,0,0.6)',
-                                    padding: '6px 12px',
-                                    borderRadius: '20px',
-                                    backdropFilter: 'blur(5px)'
-                                }}>
-                                    {safari.images.map((_, idx) => (
-                                        <div
-                                            key={idx}
-                                            style={{
-                                                width: '8px',
-                                                height: '8px',
-                                                borderRadius: '50%',
-                                                background: currentImageIndex[safari.id] === idx ? '#D97706' : 'white',
-                                                cursor: 'pointer',
-                                                transition: 'all 0.3s'
-                                            }}
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                setCurrentImageIndex(prev => ({
-                                                    ...prev,
-                                                    [safari.id]: idx
-                                                }));
-                                            }}
-                                        />
-                                    ))}
-                                </div>
-                            </div>
-
-                            <div style={{ padding: '28px' }}>
-                                <h3 style={{ fontSize: '22px', marginBottom: '12px', color: '#1F2937', fontWeight: '700' }}>
-                                    {safari.title}
-                                </h3>
-                                <div style={{ marginBottom: '16px' }}>
-                                    <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '6px' }}>
-                                        <strong>Focus:</strong> {safari.focus}
-                                    </p>
-                                    <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '6px' }}>
-                                        <strong>Type:</strong> {safari.type}
-                                    </p>
-                                </div>
-                                <p style={{ color: '#6B7280', marginBottom: '20px', lineHeight: 1.6 }}>
-                                    {safari.description}
-                                </p>
-                                <div style={{ marginBottom: '20px' }}>
-                                    <strong style={{ color: '#1F2937' }}>Highlights:</strong>
-                                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '8px' }}>
-                                        {safari.highlights.map((highlight, idx) => (
-                                            <span key={idx} style={{
-                                                background: '#F3F4F6',
-                                                padding: '4px 12px',
-                                                borderRadius: '20px',
-                                                fontSize: '12px',
-                                                color: '#4B5563'
-                                            }}>
-                                                {highlight}
-                                            </span>
+                                <div style={{ position: 'relative', height: '320px', overflow: 'hidden' }}>
+                                    <img
+                                        src={safari.images[currentImageIndex[safari.id]]}
+                                        alt={safari.title}
+                                        style={{
+                                            width: '100%',
+                                            height: '100%',
+                                            objectFit: 'cover',
+                                            transition: 'transform 0.6s ease',
+                                            transform: hoveredSafari === safari.id ? 'scale(1.1)' : 'scale(1)'
+                                        }}
+                                    />
+                                    {/* Copyright overlay */}
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: '10px',
+                                        right: '10px',
+                                        background: 'rgba(0,0,0,0.7)',
+                                        color: 'white',
+                                        padding: '4px 8px',
+                                        borderRadius: '4px',
+                                        fontSize: '10px',
+                                        fontWeight: 'bold'
+                                    }}>
+                                        © ZOE Wildlife Safaris
+                                    </div>
+                                    <div style={{
+                                        position: 'absolute',
+                                        top: '20px',
+                                        left: '20px',
+                                        background: '#D97706',
+                                        color: 'white',
+                                        padding: '8px 16px',
+                                        borderRadius: '20px',
+                                        fontWeight: 'bold',
+                                        fontSize: '14px'
+                                    }}>
+                                        {safari.days}
+                                    </div>
+                                    <div style={{
+                                        position: 'absolute',
+                                        bottom: '20px',
+                                        left: '50%',
+                                        transform: 'translateX(-50%)',
+                                        display: 'flex',
+                                        gap: '8px',
+                                        background: 'rgba(0,0,0,0.6)',
+                                        padding: '6px 12px',
+                                        borderRadius: '20px',
+                                        backdropFilter: 'blur(5px)'
+                                    }}>
+                                        {safari.images.map((_, idx) => (
+                                            <div
+                                                key={idx}
+                                                style={{
+                                                    width: '8px',
+                                                    height: '8px',
+                                                    borderRadius: '50%',
+                                                    background: currentImageIndex[safari.id] === idx ? '#D97706' : 'white',
+                                                    cursor: 'pointer',
+                                                    transition: 'all 0.3s'
+                                                }}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                    setCurrentImageIndex(prev => ({
+                                                        ...prev,
+                                                        [safari.id]: idx
+                                                    }));
+                                                }}
+                                            />
                                         ))}
                                     </div>
                                 </div>
-                                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #E5E7EB', paddingTop: '20px', gap: '12px' }}>
-                                    <button
-                                        onClick={() => setExpandedSafari(expandedSafari === safari.id ? null : safari.id)}
-                                        style={{
-                                            background: 'transparent',
-                                            color: '#D97706',
-                                            padding: '10px 20px',
-                                            border: '2px solid #D97706',
-                                            borderRadius: '30px',
-                                            fontWeight: '600',
-                                            cursor: 'pointer',
-                                            transition: 'all 0.3s ease',
-                                            fontSize: '14px'
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.target.style.background = '#D97706';
-                                            e.target.style.color = 'white';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.target.style.background = 'transparent';
-                                            e.target.style.color = '#D97706';
-                                        }}
-                                    >
-                                        {expandedSafari === safari.id ? '✕ Close' : '📖 Explore'}
-                                    </button>
-                                    <button
-                                        onClick={() => handleOpenBookingForm(safari)}
-                                        style={{
-                                            background: 'linear-gradient(135deg, #D97706 0%, #E67E22 100%)',
-                                            color: 'white',
-                                            padding: '12px 28px',
-                                            border: 'none',
-                                            borderRadius: '30px',
-                                            fontWeight: '600',
-                                            cursor: 'pointer',
-                                            transition: 'all 0.3s ease',
-                                            boxShadow: '0 2px 8px rgba(217,119,6,0.3)',
-                                            flex: 1
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.target.style.transform = 'translateY(-2px)';
-                                            e.target.style.boxShadow = '0 4px 12px rgba(217,119,6,0.4)';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.target.style.transform = 'translateY(0)';
-                                            e.target.style.boxShadow = '0 2px 8px rgba(217,119,6,0.3)';
-                                        }}
-                                    >
-                                        Request Quote
-                                    </button>
+
+                                <div style={{ padding: '28px' }}>
+                                    <h3 style={{ fontSize: '22px', marginBottom: '12px', color: '#1F2937', fontWeight: '700' }}>
+                                        {safari.title}
+                                    </h3>
+                                    <div style={{ marginBottom: '16px' }}>
+                                        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '6px' }}>
+                                            <strong>Focus:</strong> {safari.focus}
+                                        </p>
+                                        <p style={{ color: '#6B7280', fontSize: '14px', marginBottom: '6px' }}>
+                                            <strong>Type:</strong> {safari.type}
+                                        </p>
+                                    </div>
+                                    <p style={{ color: '#6B7280', marginBottom: '20px', lineHeight: 1.6 }}>
+                                        {safari.description}
+                                    </p>
+                                    <div style={{ marginBottom: '20px' }}>
+                                        <strong style={{ color: '#1F2937' }}>Highlights:</strong>
+                                        <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '8px' }}>
+                                            {safari.highlights.map((highlight, idx) => (
+                                                <span key={idx} style={{
+                                                    background: '#F3F4F6',
+                                                    padding: '4px 12px',
+                                                    borderRadius: '20px',
+                                                    fontSize: '12px',
+                                                    color: '#4B5563'
+                                                }}>
+                                                    {highlight}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #E5E7EB', paddingTop: '20px', gap: '12px' }}>
+                                        <button
+                                            onClick={() => setExpandedSafari(expandedSafari === safari.id ? null : safari.id)}
+                                            style={{
+                                                background: 'transparent',
+                                                color: '#D97706',
+                                                padding: '10px 20px',
+                                                border: '2px solid #D97706',
+                                                borderRadius: '30px',
+                                                fontWeight: '600',
+                                                cursor: 'pointer',
+                                                transition: 'all 0.3s ease',
+                                                fontSize: '14px'
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.target.style.background = '#D97706';
+                                                e.target.style.color = 'white';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.target.style.background = 'transparent';
+                                                e.target.style.color = '#D97706';
+                                            }}
+                                        >
+                                            {expandedSafari === safari.id ? '✕ Close' : '📖 Explore'}
+                                        </button>
+                                        <button
+                                            onClick={() => handleOpenBookingForm(safari)}
+                                            style={{
+                                                background: 'linear-gradient(135deg, #D97706 0%, #E67E22 100%)',
+                                                color: 'white',
+                                                padding: '12px 28px',
+                                                border: 'none',
+                                                borderRadius: '30px',
+                                                fontWeight: '600',
+                                                cursor: 'pointer',
+                                                transition: 'all 0.3s ease',
+                                                boxShadow: '0 2px 8px rgba(217,119,6,0.3)',
+                                                flex: 1
+                                            }}
+                                            onMouseEnter={(e) => {
+                                                e.target.style.transform = 'translateY(-2px)';
+                                                e.target.style.boxShadow = '0 4px 12px rgba(217,119,6,0.4)';
+                                            }}
+                                            onMouseLeave={(e) => {
+                                                e.target.style.transform = 'translateY(0)';
+                                                e.target.style.boxShadow = '0 2px 8px rgba(217,119,6,0.3)';
+                                            }}
+                                        >
+                                            Request Quote
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Expanded Safari Details */}
-                        {expandedSafari === safari.id && (
-                            <div style={{
-                                gridColumn: '1 / -1',
-                                background: 'linear-gradient(135deg, rgba(217,119,6,0.08) 0%, rgba(230,126,34,0.08) 100%)',
-                                borderRadius: '16px',
-                                padding: '40px',
-                                border: '2px solid rgba(217,119,6,0.2)',
-                                animation: 'slideDown 0.3s ease-out'
-                            }}>
-                                <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1F2937', marginBottom: '30px' }}>
-                                    ✈️ {safari.days} Itinerary Overview
-                                </h3>
-                                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
-                                    {safari.itinerary.map((item, idx) => (
-                                        <div key={idx} style={{
-                                            background: 'white',
-                                            padding: '24px',
-                                            borderRadius: '12px',
-                                            border: '1px solid #E5E7EB',
-                                            transition: 'all 0.3s ease',
-                                            cursor: 'pointer'
-                                        }}
-                                        onMouseEnter={(e) => {
-                                            e.currentTarget.style.transform = 'translateY(-4px)';
-                                            e.currentTarget.style.boxShadow = '0 8px 16px rgba(217,119,6,0.15)';
-                                        }}
-                                        onMouseLeave={(e) => {
-                                            e.currentTarget.style.transform = 'translateY(0)';
-                                            e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
-                                        }}>
-                                            <div style={{
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                gap: '12px',
-                                                marginBottom: '12px'
-                                            }}>
+                            {/* Expanded Safari Details */}
+                            {expandedSafari === safari.id && (
+                                <div style={{
+                                    gridColumn: '1 / -1',
+                                    background: 'linear-gradient(135deg, rgba(217,119,6,0.08) 0%, rgba(230,126,34,0.08) 100%)',
+                                    borderRadius: '16px',
+                                    padding: '40px',
+                                    border: '2px solid rgba(217,119,6,0.2)',
+                                    animation: 'slideDown 0.3s ease-out'
+                                }}>
+                                    <h3 style={{ fontSize: '24px', fontWeight: '700', color: '#1F2937', marginBottom: '30px' }}>
+                                        ✈️ {safari.days} Itinerary Overview
+                                    </h3>
+                                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+                                        {safari.itinerary.map((item, idx) => (
+                                            <div key={idx} style={{
+                                                background: 'white',
+                                                padding: '24px',
+                                                borderRadius: '12px',
+                                                border: '1px solid #E5E7EB',
+                                                transition: 'all 0.3s ease',
+                                                cursor: 'pointer'
+                                            }}
+                                                onMouseEnter={(e) => {
+                                                    e.currentTarget.style.transform = 'translateY(-4px)';
+                                                    e.currentTarget.style.boxShadow = '0 8px 16px rgba(217,119,6,0.15)';
+                                                }}
+                                                onMouseLeave={(e) => {
+                                                    e.currentTarget.style.transform = 'translateY(0)';
+                                                    e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
+                                                }}>
                                                 <div style={{
-                                                    background: '#D97706',
-                                                    color: 'white',
-                                                    width: '40px',
-                                                    height: '40px',
-                                                    borderRadius: '50%',
                                                     display: 'flex',
                                                     alignItems: 'center',
-                                                    justifyContent: 'center',
-                                                    fontWeight: 'bold',
-                                                    fontSize: '16px'
+                                                    gap: '12px',
+                                                    marginBottom: '12px'
                                                 }}>
-                                                    {idx + 1}
-                                                </div>
-                                                <div>
-                                                    <div style={{ fontSize: '14px', color: '#D97706', fontWeight: '600', textTransform: 'uppercase' }}>
-                                                        {item.day}
+                                                    <div style={{
+                                                        background: '#D97706',
+                                                        color: 'white',
+                                                        width: '40px',
+                                                        height: '40px',
+                                                        borderRadius: '50%',
+                                                        display: 'flex',
+                                                        alignItems: 'center',
+                                                        justifyContent: 'center',
+                                                        fontWeight: 'bold',
+                                                        fontSize: '16px'
+                                                    }}>
+                                                        {idx + 1}
                                                     </div>
-                                                    <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#1F2937', margin: '4px 0 0 0' }}>
-                                                        {item.title}
-                                                    </h4>
+                                                    <div>
+                                                        <div style={{ fontSize: '14px', color: '#D97706', fontWeight: '600', textTransform: 'uppercase' }}>
+                                                            {item.day}
+                                                        </div>
+                                                        <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#1F2937', margin: '4px 0 0 0' }}>
+                                                            {item.title}
+                                                        </h4>
+                                                    </div>
                                                 </div>
+                                                <p style={{ color: '#6B7280', fontSize: '14px', lineHeight: '1.6', margin: '12px 0 0 0' }}>
+                                                    {item.details}
+                                                </p>
                                             </div>
-                                            <p style={{ color: '#6B7280', fontSize: '14px', lineHeight: '1.6', margin: '12px 0 0 0' }}>
-                                                {item.details}
-                                            </p>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-                        )}
+                            )}
                         </React.Fragment>
                     ))}
                 </div>
